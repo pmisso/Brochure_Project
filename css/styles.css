@@ -1,0 +1,235 @@
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+
+
+  * {
+    box-sizing: border-box;
+    font-family: monospace;
+  }
+
+body, html {
+    height: 100%;
+    min-height: 100%;
+}
+
+#backgroundimage {
+  content: "";
+  background-image: url(../images/303background.jpg);
+  height: 100%;
+  position: fixed;
+  top: 0px;
+  right: 0px;
+  bottom: 0px;
+  left: 0px;
+  opacity: 0.2;
+  background-color: white;
+  z-index: -1;
+}
+
+.clearfix {
+    content: "";
+    clear: both;
+}
+
+.logos {
+    display: inline;
+    float: left;
+    text-align: center;
+    margin-top: 2em;
+}
+
+.toplogo {
+    width: 60%;
+    margin-left: 0;
+    padding-left: 0;
+    padding-bottom: 2em;
+    margin: auto;
+}
+
+.navbar {
+    width: 100%;
+    background-color: rgb(172, 172, 172);
+    overflow: auto;
+}
+
+.navbar a {
+    float: left;
+    padding: 12px;
+    color: #f2f2f2;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12pt;
+    width: 33.33%;
+    border: 1px solid black;
+    margin: 0;
+}
+
+.navbar a:hover {
+    background-color: rgb(144, 248, 103);
+    color: black;
+}
+
+.navbar a:active {
+    background-color: #04aa6d;
+    color: white;
+}
+
+h1 {
+  font-family: "Press Start 2P";
+  text-align: center;
+  text-shadow: -4px 4px 8px #424242;
+  padding-top: 3%;
+  padding-bottom: 2%;
+  border-bottom: 2px solid black;
+}
+
+ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+  }
+
+  li {
+    float: left;
+    font-size: 11pt;
+    font-family: monospace;
+  }
+
+  li a {
+    display: block;
+    color: white;
+    text-align: center;
+    padding: 14px 16px;
+    margin-left: 7em;
+    text-decoration: none;
+  }
+
+  #backgroundcolumn {
+      display: block;
+      width: 90%;
+      height: 100%;
+      margin-left: auto;
+      margin-right: auto;
+      background-color: grey;
+      padding-bottom: 100%;
+      box-shadow: -5px 5px rgba(25, 25, 25, 0.6);
+      z-index: -1;
+  }
+
+  .paragraphs {
+    position: relative;
+    top: 40%;
+    background:none;
+  }
+
+  #para1 {
+    font-size: 20px;
+    width: 80%;
+    height: 30%;
+    margin: auto;
+    padding-right: 0%;
+    clear: both;
+  }
+
+  #para1 p {
+    width: 100%;
+    text-align: center;
+    text-justify: inter-word;
+  }
+
+  figure {
+    display: inline-block;
+    margin-left: 25%;
+    width: 50%;
+    height: auto;
+  }
+
+  input[type=checkbox] {
+    display: none;
+  }
+
+  figure img {
+    vertical-align: top;
+    width: 100%;
+    height: auto;
+    transition: transform 0.25s ease;
+    cursor: zoom-in;
+  }
+
+  input[type=checkbox]:checked ~ label > img {
+    transform: scale(1.8);
+    cursor: zoom-out;
+  }
+
+  figure figcaption {
+    font-size: 11pt;
+    text-align: center;
+    margin-top: 2%;
+    border-bottom: 1px dotted black;
+  }
+
+  .bodytext {
+    overflow: auto;
+    background-color:rgba(75, 75, 75, 0.2);
+    width: 100%;
+    height: 150%;
+  }
+
+  .paras {
+    font-size: 12pt;
+    float: top;
+    text-align: center;
+    width: 100%;
+    height: 50%;
+    padding: 20px;
+    border: 1px solid black;
+  }
+
+  #howtouse {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  #howtouse h2 {
+    font-size: 25px;
+    border-bottom: 1px solid black;
+    text-align: center;
+  }
+
+  .toplink {
+    position: relative;
+    right: 2em;
+    float: right;
+    text-align: right;
+    font-size: 10px;
+    color: black;
+  }
+
+  .toplink:hover {
+    color: greenyellow;
+  }
+
+  #howtodiv {
+    width: 100%;
+  }
+
+  #howtovideo {
+    display: block;
+    margin: auto;
+  }
+
+  #audiosamples {
+    margin-top: 2em;
+    margin-bottom: 2em;
+  }
+
+  #audiosamples h2 {
+    font-size: 25px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid black;
+    text-align: center;
+  }
+
+
+
