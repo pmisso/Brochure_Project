@@ -19,10 +19,6 @@ ul, a, p, footer {
     font-size: 100%;
 }
 
-.audioplayer {
-    size: 100%;
-}
-
 @media screen and (max-width: 900px) {
     
     h1 {
@@ -40,7 +36,7 @@ ul, a, p, footer {
     .audiodivs p {
         font-size: 1.3em;
     }
-    
+
 }
   
 @media screen and (max-width: 600px) {
