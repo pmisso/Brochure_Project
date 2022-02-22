@@ -5,14 +5,16 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Roland TB-303 - About</title>
     <link rel="stylesheet" href="./css/styles.css">
-    <link rel="responsive" href="./css/responsive.css">
+    <link rel="stylesheet" href="./css/responsive.css">
 </head>
 <body>
+
+    <!--Heading section, I used a logo image for the title rather than a h1 or similar element. Also set up a top navbar with links that change color on hover and click-->
     <div id="backgroundimage"></div>
     <header>
 
             <div class= "logos" id="navigation">
-                <img class= "toplogo" src="./images/rolandbassline.png" alt="Roland logo">
+                <img id="toplogo" src="./images/rolandbassline.png" alt="Roland logo">
             </div>
             <div class="navbar">
                 <ul>
@@ -34,7 +36,7 @@
             <div class="paragraphs" id="para1">
                 <p>This page is dedicated to the Roland TB-303 Bassline Synthesizer, one of the most highly coveted synthesizers used in modern electronic music production.</p>
             </div>
-
+<!--I Set up a click-to-zoom feature on my image in this div-->
             <div>
                 <figure>
                     <input type="checkbox" id="zoomCheck">
@@ -51,46 +53,52 @@
                 <p>The Roland TB-303 was released in 1981 by Roland Corporation. Its initial purpose was to be used as a bassline synthesizer for musicians to play their instruments along with. The 303 was considered a commercial failure after its release; musicians did not consider it an adequate replacement for a bassline due to the unusual and artificial sounds it produced. Production of the 303 was eventually discontinued in 1984, 3 years after its release.</p>
             </div>
 
-            <div class="paras">
+            <div class="paras" id="para2">
                 <p>Some years later, the 303's popularity resurged when electronic music producers discovered they enjoyed expermienting with the squelchy, rubbery sounds the 303 could create. These producers would eventually contribute to the TB-303's characteristic sound becoming a mainstay of electronic music, particularly in dance genres such as Techno, House, Acid House, and Trance, among many others.</p>
             </div>
             
         </div>    
-
+<!-- I implemented some 'jump to top' buttons below, for my 'how to' and 'audio samples' sections, for ease of navigation-->
         <div id="howtouse">   
             <a class="toplink" href="#navigation">[Top]</a>     
             <h2>How to use the TB-303</h2>
         </div>
 
         <div id="howtodiv">
-            <iframe id="howtovideo" width="853" height="480" src="https://www.youtube.com/embed/6oEeeIqXaEo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+            <iframe id="howtovideo" width="800" height="400" src="https://www.youtube.com/embed/6oEeeIqXaEo" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
         </div>
 
         <div id="audiosamples">    
             <a class="toplink" href="#navigation">[Top]</a>    
             <h2>Audio Samples</h2>
         </div>
-
-        <div>
-            <iframe id="joshwink" width="560" height="120" src="https://www.youtube.com/embed/d3hAnAnJwyU?start=116" autoplay="false" allowfullscreen></iframe>
+<!--some media elements for playing audio samples-->
+        <div class="audiodivs">
+            <audio class="audioplayer" controls> 
+                <source src="./audio/joshwinkclip.mp3" type="audio/mp3">
+                <source src="./audio/joshwinkclip.ogg" type="audio/ogg">
+            </audio>
+            <p>An iconic track from 1995 that helped cement the 303 sound in dance music: <b><em>Josh Wink - Higher State of Consciousness</em></b></p>
         </div>
-
-        <div>
-            <iframe id="tameimpala" width="560" height="315" src="https://www.youtube.com/embed/71aoxPImLP0?start=270" autoplay="false" allowfullscreen></iframe>
-
-            <iframe width="560" height="315" src="https://www.youtube.com/embed/qI-76ALJSJU" title="YouTube video player" autoplay="false" allow="encrypted-media" allowfullscreen></iframe>
+        <div class="audiodivs">
+            <audio class="audioplayer" controls> 
+                <source src="./audio/tameimpalaclip.mp3" type="audio/mp3">
+                <source src="./audio/tameimpalaclip.ogg" type="audio/ogg">
+            </audio>
+            <p>Slidey, Rubbery 303 bass in the outro to <b><em>Tame Impala - Breathe Deeper</em></b></p>
         </div>
-
-        <div>
-            <iframe id="daftpunk" width="560" height="120" src="https://www.youtube.com/embed/PwILkY9gRrc?start=136" autoplay="false" allowfullscreen></iframe>
-
+        <div class="audiodivs">
+            <audio class="audioplayer" controls> 
+                <source src="./audio/daftpunkclip.mp3" type="audio/mp3">
+                <source src="./audio/daftpunkclip.ogg" type="audio/ogg">
+            </audio>
+            <p>A groovy distorted 303 taken from <b><em>Daft Punk - Da Funk</em></b></p>
         </div>
 
      </main>
 
      <footer>
-        <div>
-            <p>Paul Misso,</p>
-            <p>2022</p>
+        <div class="bottomtext">
+            <p>&#169 Paul Misso, 2022</p>
         </div>
      </footer>

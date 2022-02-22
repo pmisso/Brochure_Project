@@ -1,8 +1,14 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap'); /* Imported a google font for title */
 
+
+
+
+/*/// Global Effects ///*/
 
   * {
     box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
     font-family: monospace;
   }
 
@@ -11,12 +17,15 @@ body, html {
     min-height: 100%;
 }
 
+/* BACKGROUND */
+
+
 #backgroundimage {
   content: "";
   background-image: url(../images/303background.jpg);
   height: 100%;
   position: fixed;
-  top: 0px;
+  top: 0px;               /* <---- I used an image of a TB-303 as a background wallpaper behind the content*/
   right: 0px;
   bottom: 0px;
   left: 0px;
@@ -30,25 +39,37 @@ body, html {
     clear: both;
 }
 
+/* HEADER STYLING */
+
 .logos {
-    display: inline;
-    float: left;
-    text-align: center;
+    display: block;
     margin-top: 2em;
+    margin: 0 auto;
+    width: 800px;
+    max-width: 800px;
 }
 
-.toplogo {
-    width: 60%;
-    margin-left: 0;
-    padding-left: 0;
-    padding-bottom: 2em;
-    margin: auto;
+#toplogo {
+    position: relative;
+    width: 100%;
+    padding-top: 5%;
+    padding-bottom: 25px;
 }
 
 .navbar {
-    width: 100%;
+    width: 800px;
     background-color: rgb(172, 172, 172);
+    margin-left: auto;
+    margin-right: auto;
     overflow: auto;
+}
+
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: #333;
 }
 
 .navbar a {
@@ -73,46 +94,30 @@ body, html {
     color: white;
 }
 
+/* MAIN SECTION ELEMENTS */
+
+/* Title */
+
 h1 {
   font-family: "Press Start 2P";
   text-align: center;
   text-shadow: -4px 4px 8px #424242;
   padding-top: 3%;
-  padding-bottom: 2%;
+  padding-bottom: 3%;
   border-bottom: 2px solid black;
 }
 
-ul {
-    list-style-type: none;
-    margin: 0;
-    padding: 0;
-    overflow: hidden;
-    background-color: #333;
-  }
-
-  li {
-    float: left;
-    font-size: 11pt;
-    font-family: monospace;
-  }
-
-  li a {
-    display: block;
-    color: white;
-    text-align: center;
-    padding: 14px 16px;
-    margin-left: 7em;
-    text-decoration: none;
-  }
+/* Body Styling */
 
   #backgroundcolumn {
       display: block;
-      width: 90%;
+      width: 800px;
       height: 100%;
       margin-left: auto;
-      margin-right: auto;
+      margin-right: auto;                         /* <-- This implements the grey column for the background*/
       background-color: grey;
-      padding-bottom: 100%;
+      padding-bottom: 100px;
+      border: 1px solid black;
       box-shadow: -5px 5px rgba(25, 25, 25, 0.6);
       z-index: -1;
   }
@@ -148,17 +153,18 @@ ul {
   input[type=checkbox] {
     display: none;
   }
-
-  figure img {
-    vertical-align: top;
+                                                    /* <--the styling between 'figure' and 'figure figcaption' implements a click-to-zoom feature on the image  */
+  figure img {                                      /*    this is implemented by giving the figure element an input type of checkbox, and changing what happens */
+    vertical-align: top;                            /*    to the image when the box is 'checked' vs 'unchecked'                                                 */
     width: 100%;
     height: auto;
     transition: transform 0.25s ease;
     cursor: zoom-in;
+    box-shadow:-5px 5px rgba(25, 25, 25, 0.4)
   }
 
   input[type=checkbox]:checked ~ label > img {
-    transform: scale(1.8);
+    transform: scale(1.9);
     cursor: zoom-out;
   }
 
@@ -166,7 +172,6 @@ ul {
     font-size: 11pt;
     text-align: center;
     margin-top: 2%;
-    border-bottom: 1px dotted black;
   }
 
   .bodytext {
@@ -177,7 +182,7 @@ ul {
   }
 
   .paras {
-    font-size: 12pt;
+    font-size: 1.2em;
     float: top;
     text-align: center;
     width: 100%;
@@ -186,23 +191,30 @@ ul {
     border: 1px solid black;
   }
 
+  #para2 {
+    border-bottom: 3px dotted black;
+  }
+
   #howtouse {
-    margin-top: 2em;
-    margin-bottom: 2em;
+    margin-top: 20px;
+    margin-bottom: 20px;
   }
 
   #howtouse h2 {
-    font-size: 25px;
-    border-bottom: 1px solid black;
+    font-size: 1.5em;
+    font-family: "Press Start 2P";
+    text-shadow: -2px 2px 4px #424242;
+    border-bottom: 3px dotted black;
     text-align: center;
+    padding-bottom: 15px;
   }
 
   .toplink {
     position: relative;
     right: 2em;
-    float: right;
+    float: right;          /* <-- implements a jump-to-top link on the right side of the content */
     text-align: right;
-    font-size: 10px;
+    font-size: 1em;
     color: black;
   }
 
@@ -212,6 +224,8 @@ ul {
 
   #howtodiv {
     width: 100%;
+    padding-bottom: 15px;
+    border-bottom: 3px dotted black;
   }
 
   #howtovideo {
@@ -225,11 +239,59 @@ ul {
   }
 
   #audiosamples h2 {
-    font-size: 25px;
+    font-size: 1.5em;
+    font-family: "Press Start 2P";
     padding-bottom: 20px;
-    border-bottom: 1px solid black;
+    border-bottom: 3px dotted black;
+    text-shadow: -2px 2px 4px #424242;
     text-align: center;
   }
+
+  .audiodivs {
+    display: block;
+    margin: auto;
+    width: 100%;
+    border: 1px solid black;
+    padding-bottom: 15px;
+  }
+
+  .audiodivs audio {
+    padding: 10px;
+    padding-top: 15px;
+    margin-top: 20px;
+    position: relative;
+    left: 30%;
+  }
+
+  .audiodivs p {
+    width: 100%;
+    font-size: 11pt;
+    text-align: center;
+  }
+
+  /* Footer Styling */
+
+  .bottomtext {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 50px;
+    background-color: rgb(172, 172, 172);
+    box-shadow: -5px 5px rgba(25, 25, 25, 0.6);
+    overflow: auto;
+
+}
+
+.bottomtext p {
+    float: left;
+    padding: 12px;
+    text-align: center;
+    text-decoration: none;
+    font-size: 12pt;
+    width: 100%;
+    border: 1px solid black;
+    margin: 0;
+}
 
 
 

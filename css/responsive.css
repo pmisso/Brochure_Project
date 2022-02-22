@@ -1,0 +1,62 @@
+
+/*RESPONSIVE CSS*/
+
+/*The following is mainly to re-size text for viewing through a smaller viewport. Optimised for tablet view, works in most med/large mobile screen sizes too*/
+
+h1 {
+    font-size: 100%;
+}
+
+h2 {
+    font-size: 100%;
+} 
+
+ul, a, p, footer {
+    font-size: 100%;
+}
+
+.audiodivs p {
+    font-size: 100%;
+}
+
+.audioplayer {
+    size: 100%;
+}
+
+@media screen and (max-width: 900px) {
+    
+    h1 {
+        font-size: 1.3em;
+    }
+    
+    h2 {
+        font-size: 1.3em;
+    } 
+    
+    ul, a, p, footer {
+        font-size: 1.3em;
+    }
+    
+    .audiodivs p {
+        font-size: 1.3em;
+    }
+    
+}
+  
+@media screen and (max-width: 600px) {
+    
+    h1 {
+        font-size: 1.6em;
+    }
+    
+    h2 {
+        font-size: 1.6em;
+    } 
+    
+    ul, a, p, footer {
+        font-size: 1.7em;
+    }
+        .audiodivs p {
+            font-size: 1.7em;
+        }
+    }
